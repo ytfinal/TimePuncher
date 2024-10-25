@@ -2,8 +2,6 @@ namespace TimePuncher
 {
     public partial class TimerPuncherForm : Form
     {
-
-
         private const double offSetStartHours = 7.5;
         private const int defaultWorkHours = 8;
         private const double defaultHoursToLunch = 4.25;
@@ -12,20 +10,17 @@ namespace TimePuncher
         public TimerPuncherForm()
         {
             DateTime currentTime = DateTime.Now;
-            DateTime startTime;
-            DateTime endTime;
-
-            startTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, 0, 0, 0).AddHours(offSetStartHours);
-            endTime = startTime.AddHours(defaultWorkHours);
-
+            DateTime startTime= new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, 0, 0, 0).AddHours(offSetStartHours);
             DateTime lunchStartTime = startTime.AddHours(defaultHoursToLunch);
-
+            DateTime lunchEndTime = lunchStartTime.AddHours(defaultLunchHours);
+            DateTime endTime= startTime.AddHours(defaultWorkHours).AddHours(defaultLunchHours);
+            
             InitializeComponent();
+
             startTimePicker.Value = startTime;
             lunchStartTimePicker.Value = lunchStartTime;
-            lunchEndTimePicker.Value = lunchStartTime.AddHours(defaultLunchHours);
+            lunchEndTimePicker.Value = lunchEndTime;
             endTimePicker.Value = endTime;
-
         }
 
         private void TimerPuncherForm_Load(object sender, EventArgs e)
