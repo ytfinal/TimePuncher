@@ -37,18 +37,19 @@
             this.lunchStartTimePicker = new System.Windows.Forms.DateTimePicker();
             this.lunchEndlabel = new System.Windows.Forms.Label();
             this.lunchEndTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.lunchMinutesLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // hoursWorkedLabel
             // 
             this.hoursWorkedLabel.AutoSize = true;
-            this.hoursWorkedLabel.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.hoursWorkedLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.hoursWorkedLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.hoursWorkedLabel.Location = new System.Drawing.Point(641, 367);
+            this.hoursWorkedLabel.Location = new System.Drawing.Point(7, 181);
             this.hoursWorkedLabel.Name = "hoursWorkedLabel";
-            this.hoursWorkedLabel.Size = new System.Drawing.Size(120, 50);
+            this.hoursWorkedLabel.Size = new System.Drawing.Size(179, 45);
             this.hoursWorkedLabel.TabIndex = 0;
-            this.hoursWorkedLabel.Text = "Hours";
+            this.hoursWorkedLabel.Text = "Hours: 0.00";
             this.hoursWorkedLabel.Click += new System.EventHandler(this.hoursWorkedLabel_Click);
             // 
             // startTimePicker
@@ -56,7 +57,7 @@
             this.startTimePicker.CustomFormat = "hh:mm tt";
             this.startTimePicker.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.startTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startTimePicker.Location = new System.Drawing.Point(265, 65);
+            this.startTimePicker.Location = new System.Drawing.Point(146, 4);
             this.startTimePicker.Name = "startTimePicker";
             this.startTimePicker.ShowUpDown = true;
             this.startTimePicker.Size = new System.Drawing.Size(132, 39);
@@ -67,7 +68,7 @@
             // 
             this.startTimeLabel.AutoSize = true;
             this.startTimeLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.startTimeLabel.Location = new System.Drawing.Point(197, 70);
+            this.startTimeLabel.Location = new System.Drawing.Point(78, 9);
             this.startTimeLabel.Name = "startTimeLabel";
             this.startTimeLabel.Size = new System.Drawing.Size(67, 32);
             this.startTimeLabel.TabIndex = 2;
@@ -77,7 +78,7 @@
             // 
             this.endLabel.AutoSize = true;
             this.endLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.endLabel.Location = new System.Drawing.Point(200, 205);
+            this.endLabel.Location = new System.Drawing.Point(81, 144);
             this.endLabel.Name = "endLabel";
             this.endLabel.Size = new System.Drawing.Size(59, 32);
             this.endLabel.TabIndex = 4;
@@ -88,7 +89,7 @@
             this.endTimePicker.CustomFormat = "hh:mm tt";
             this.endTimePicker.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.endTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endTimePicker.Location = new System.Drawing.Point(265, 200);
+            this.endTimePicker.Location = new System.Drawing.Point(146, 139);
             this.endTimePicker.Name = "endTimePicker";
             this.endTimePicker.ShowUpDown = true;
             this.endTimePicker.Size = new System.Drawing.Size(132, 39);
@@ -99,7 +100,7 @@
             // 
             this.lunchStartLabel.AutoSize = true;
             this.lunchStartLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lunchStartLabel.Location = new System.Drawing.Point(126, 115);
+            this.lunchStartLabel.Location = new System.Drawing.Point(7, 54);
             this.lunchStartLabel.Name = "lunchStartLabel";
             this.lunchStartLabel.Size = new System.Drawing.Size(138, 32);
             this.lunchStartLabel.TabIndex = 6;
@@ -110,7 +111,7 @@
             this.lunchStartTimePicker.CustomFormat = "hh:mm tt";
             this.lunchStartTimePicker.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lunchStartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.lunchStartTimePicker.Location = new System.Drawing.Point(265, 110);
+            this.lunchStartTimePicker.Location = new System.Drawing.Point(146, 49);
             this.lunchStartTimePicker.Name = "lunchStartTimePicker";
             this.lunchStartTimePicker.ShowUpDown = true;
             this.lunchStartTimePicker.Size = new System.Drawing.Size(132, 39);
@@ -121,7 +122,7 @@
             // 
             this.lunchEndlabel.AutoSize = true;
             this.lunchEndlabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lunchEndlabel.Location = new System.Drawing.Point(134, 160);
+            this.lunchEndlabel.Location = new System.Drawing.Point(15, 99);
             this.lunchEndlabel.Name = "lunchEndlabel";
             this.lunchEndlabel.Size = new System.Drawing.Size(130, 32);
             this.lunchEndlabel.TabIndex = 8;
@@ -132,18 +133,30 @@
             this.lunchEndTimePicker.CustomFormat = "hh:mm tt";
             this.lunchEndTimePicker.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lunchEndTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.lunchEndTimePicker.Location = new System.Drawing.Point(265, 155);
+            this.lunchEndTimePicker.Location = new System.Drawing.Point(146, 94);
             this.lunchEndTimePicker.Name = "lunchEndTimePicker";
             this.lunchEndTimePicker.ShowUpDown = true;
             this.lunchEndTimePicker.Size = new System.Drawing.Size(132, 39);
             this.lunchEndTimePicker.TabIndex = 7;
             this.lunchEndTimePicker.ValueChanged += new System.EventHandler(this.lunchEndTimePicker_ValueChanged);
             // 
+            // lunchMinutesLabel
+            // 
+            this.lunchMinutesLabel.AutoSize = true;
+            this.lunchMinutesLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lunchMinutesLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.lunchMinutesLabel.Location = new System.Drawing.Point(7, 226);
+            this.lunchMinutesLabel.Name = "lunchMinutesLabel";
+            this.lunchMinutesLabel.Size = new System.Drawing.Size(322, 45);
+            this.lunchMinutesLabel.TabIndex = 9;
+            this.lunchMinutesLabel.Text = "Lunch (Minutes): 0.00";
+            // 
             // TimerPuncherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(339, 276);
+            this.Controls.Add(this.lunchMinutesLabel);
             this.Controls.Add(this.lunchEndlabel);
             this.Controls.Add(this.lunchEndTimePicker);
             this.Controls.Add(this.lunchStartLabel);
@@ -153,6 +166,8 @@
             this.Controls.Add(this.startTimeLabel);
             this.Controls.Add(this.startTimePicker);
             this.Controls.Add(this.hoursWorkedLabel);
+            this.MaximumSize = new System.Drawing.Size(355, 315);
+            this.MinimumSize = new System.Drawing.Size(355, 315);
             this.Name = "TimerPuncherForm";
             this.Text = "Timer Puncher";
             this.Load += new System.EventHandler(this.TimerPuncherForm_Load);
@@ -172,5 +187,6 @@
         private DateTimePicker lunchStartTimePicker;
         private Label lunchEndlabel;
         private DateTimePicker lunchEndTimePicker;
+        private Label lunchMinutesLabel;
     }
 }
