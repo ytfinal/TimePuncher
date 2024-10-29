@@ -38,6 +38,7 @@
             this.lunchEndlabel = new System.Windows.Forms.Label();
             this.lunchEndTimePicker = new System.Windows.Forms.DateTimePicker();
             this.lunchMinutesLabel = new System.Windows.Forms.Label();
+            this.reportTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // hoursWorkedLabel
@@ -147,15 +148,25 @@
             this.lunchMinutesLabel.ForeColor = System.Drawing.Color.DarkRed;
             this.lunchMinutesLabel.Location = new System.Drawing.Point(7, 226);
             this.lunchMinutesLabel.Name = "lunchMinutesLabel";
-            this.lunchMinutesLabel.Size = new System.Drawing.Size(322, 45);
+            this.lunchMinutesLabel.Size = new System.Drawing.Size(178, 45);
             this.lunchMinutesLabel.TabIndex = 9;
-            this.lunchMinutesLabel.Text = "Lunch (Minutes): 0.00";
+            this.lunchMinutesLabel.Text = "Lunch: 0.00";
+            // 
+            // reportTextBox
+            // 
+            this.reportTextBox.Location = new System.Drawing.Point(15, 274);
+            this.reportTextBox.Multiline = true;
+            this.reportTextBox.Name = "reportTextBox";
+            this.reportTextBox.ReadOnly = true;
+            this.reportTextBox.Size = new System.Drawing.Size(314, 125);
+            this.reportTextBox.TabIndex = 10;
             // 
             // TimerPuncherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 276);
+            this.ClientSize = new System.Drawing.Size(339, 411);
+            this.Controls.Add(this.reportTextBox);
             this.Controls.Add(this.lunchMinutesLabel);
             this.Controls.Add(this.lunchEndlabel);
             this.Controls.Add(this.lunchEndTimePicker);
@@ -166,8 +177,8 @@
             this.Controls.Add(this.startTimeLabel);
             this.Controls.Add(this.startTimePicker);
             this.Controls.Add(this.hoursWorkedLabel);
-            this.MaximumSize = new System.Drawing.Size(355, 315);
-            this.MinimumSize = new System.Drawing.Size(355, 315);
+            this.MaximumSize = new System.Drawing.Size(355, 450);
+            this.MinimumSize = new System.Drawing.Size(355, 450);
             this.Name = "TimerPuncherForm";
             this.Text = "Timer Puncher";
             this.Load += new System.EventHandler(this.TimerPuncherForm_Load);
@@ -188,5 +199,6 @@
         private Label lunchEndlabel;
         private DateTimePicker lunchEndTimePicker;
         private Label lunchMinutesLabel;
+        private TextBox reportTextBox;
     }
 }

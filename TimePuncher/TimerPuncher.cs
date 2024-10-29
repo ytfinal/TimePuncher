@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace TimePuncher
 {
     public partial class TimerPuncherForm : Form
@@ -6,6 +8,7 @@ namespace TimePuncher
         private const int defaultWorkHours = 8;
         private const double defaultHoursToLunch = 4.25;
         private const double defaultLunchHours = 0.5;
+        private const string dateFormat = "hh:mm tt";
 
         public TimerPuncherForm()
         {
@@ -39,8 +42,18 @@ namespace TimePuncher
             double totalLunchMinutes = lunchTimeSpan.TotalMinutes;
             string summary = $"Hours: {(totalWorkMinutes / 60).ToString("0.00")}";
             hoursWorkedLabel.Text = summary;
-            string lunchHours = $"Lunch (Minutes): {(totalLunchMinutes).ToString("0.00")}";
+            string lunchHours = $"Lunch: {(totalLunchMinutes / 60).ToString("0.00")}";
             lunchMinutesLabel.Text = lunchHours;
+
+            StringBuilder reportTextBuilder = new StringBuilder();
+            reportTextBuilder.AppendLine($"Start Time: {startTime.ToString(dateFormat)}");
+            reportTextBuilder.AppendLine($"Lunch Start Time: {lunchStartTime.ToString(dateFormat)}");
+            reportTextBuilder.AppendLine($"Lunch End Time: {lunchEndTime.ToString(dateFormat)}");
+            reportTextBuilder.AppendLine($"End Time: {endTime.ToString(dateFormat)}");
+            reportTextBuilder.AppendLine(summary);
+            reportTextBuilder.AppendLine(lunchHours);
+
+            reportTextBox.Text = reportTextBuilder.ToString();
         }
 
         private void startTimePicker_ValueChanged(object sender, EventArgs e)
